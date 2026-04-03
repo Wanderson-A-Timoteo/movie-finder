@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
+import MovieModal from "./MovieModal";
 import { GiPopcorn } from "react-icons/gi";
 import { FaSpinner } from "react-icons/fa";
 
 function Home() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   useEffect(() => {
     async function fetchPopularMovies() {
@@ -27,6 +29,9 @@ function Home() {
     fetchPopularMovies();
   }, []);
 
+  const handleOpenModal = (movie) => setSelectedMovie(movie);
+  const handleCloseModal = () => setSelectedMovie(null);
+
   return (
     <main className="search-page">
       <h2 className="title" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "10px" }}>
@@ -41,10 +46,19 @@ function Home() {
       ) : (
         <ul className="movies-grid">
           {popularMovies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
+            <MovieCard 
+              key={movie.id} 
+              movie={movie} 
+              onClick={handleOpenModal}
+            />
           ))}
         </ul>
       )}
+
+      <MovieModal 
+        movie={selectedMovie} 
+        onClose={handleCloseModal} 
+      />
     </main>
   );
 }

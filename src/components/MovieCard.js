@@ -1,12 +1,12 @@
 import { FaStar } from "react-icons/fa";
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, onClick }) {
   const imageUrl = movie.poster_path 
     ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` 
     : "https://via.placeholder.com/500x750?text=Sem+Capa";
 
   return (
-    <li className="movie-card">
+    <li className="movie-card" onClick={() => onClick(movie)} style={{ cursor: "pointer" }}>
       <img src={imageUrl} alt={movie.title} />
       
       <div className="movie-info">
