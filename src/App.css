@@ -107,3 +107,26 @@ body {
   color: #f5c518;
 }
 
+
+/* --- Estilos da Página de Busca --- */
+.search-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.query-text {
+  color: #f5c518;
+}
+
+.loading,
+.no-results {
+  font-size: 1.5rem;
+  color: #888;
+  margin-top: 3rem;
+}
+
