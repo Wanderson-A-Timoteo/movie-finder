@@ -317,3 +317,43 @@ body {
     width: 200px;
   }
 }
+
+
+/* --- Estilos da Paginação --- */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pagination-button {
+  background-color: #f5c518;
+  color: #000000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #d4a910;
+  transform: scale(1.05);
+}
+
+.pagination-button:disabled {
+  background-color: #555555;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
