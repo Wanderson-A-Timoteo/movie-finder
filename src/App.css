@@ -159,3 +159,68 @@ body {
   }
 }
 
+
+
+/* --- Estilos da Página 404 --- */
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 60vh;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.not-found-page p {
+  color: #aaaaaa;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.back-home-btn {
+  background-color: #f5c518;
+  color: #000000;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #d4a910;
+}
+
+
+/* --- Estilos do Rodapé (Footer) --- */
+.footer {
+  background-color: #000000;
+  border-top: 2px solid #333;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  color: #aaaaaa;
+  font-size: 0.9rem;
+}
+
+.footer-content a {
+  color: #aaaaaa;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #f5c518;
+  transform: scale(1.1);
+}
