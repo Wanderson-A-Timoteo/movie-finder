@@ -1,10 +1,15 @@
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import { MovieProvider } from "./context/MovieContext";
+import Header from "./components/Header";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Movie Finder</h1>
-    </div>
+    <MovieProvider>
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    </MovieProvider>
   );
 }
 
