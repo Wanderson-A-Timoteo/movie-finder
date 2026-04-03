@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { MovieProvider } from "./context/MovieContext";
 import Header from "./components/Header";
 import Search from "./components/Search";
@@ -10,7 +10,7 @@ import "./App.css";
 function App() {
   return (
     <MovieProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="app-container" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
           
           <Header />
@@ -26,7 +26,7 @@ function App() {
           <Footer />
           
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </MovieProvider>
   );
 }
