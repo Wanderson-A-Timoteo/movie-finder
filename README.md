@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+<h1 align="center">
+  🎬 Movie Finder
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-executar-aplicação">Executar Aplicação</a>
+</p>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+## 💻 Projeto
 
-### `npm start`
+Bem-vindo ao repositório do **Movie Finder**, uma aplicação web front-end desenvolvida em **React.js**. Este projeto foi construído para listar os filmes mais populares do momento e permitir a busca dinâmica de obras cinematográficas, consumindo dados reais e em tempo real da API do TMDB (The Movie Database). 🍿
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Projeto focado na construção de Single Page Applications (SPA), gerenciamento de estados globais e consumo de APIs RESTful.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+🔗 **Demo Online:** [movie-finder.github.io](https://wanderson-a-timoteo.github.io/movie-finder/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## 🚀 Funcionalidades
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Página Inicial (Home):** Listagem dinâmica em grade (grid) dos filmes mais populares e em alta no cinema e streaming.
+- **Sistema de Busca:** Pesquisa detalhada de filmes por título através de uma barra de pesquisa integrada ao cabeçalho.
+- **Paginação:** Navegação fluida entre as páginas de resultados (limitada a 500 páginas conforme a API do TMDB), tanto na Home quanto na Busca.
+- **Modal de Detalhes:** Visualização aprofundada de cada filme contendo:
+  - Pôster em alta resolução (com tratamento de fallback para filmes sem capa).
+  - Sinopse completa traduzida para o português.
+  - Avaliação (nota do público em estrelas).
+  - Data de lançamento formatada.
+- **UX/UI Profissional:** Feedback visual com telas de *Loading* (spinner animado) durante as requisições e design inspirado nas paletas clássicas de cinema (Dark Mode nativo).
+- **Tratamento de Rotas:** Rota customizada para tratamento de erros (Página 404).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm run eject`
+- **React.js** (Context API e Hooks: `useState`, `useEffect`, `useContext`)
+- **React Router DOM v6** (Gerenciamento de Rotas da SPA)
+- **React Icons** (SVG Icons)
+- **CSS3** (Estilização global, Flexbox/Grid, transições e keyframes de animação)
+- **Fetch API** (Requisições HTTP)
+- **TMDB API** (The Movie Database - Fonte de dados)
+- **Git & GitHub** (Versionamento de código)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔥 Executando Localmente a Aplicação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Caso você deseje executar o projeto na sua máquina local, basta seguir os passos abaixo:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🌀 Começando...
 
-## Learn More
+Para começar, você deve clonar o repositório do projeto na sua máquina e instalar as dependências.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 🔑 Variáveis de Ambiente (API Key):
+Como este projeto consome dados do TMDB, você precisará de uma chave de API gratuita.
+1. Crie uma conta no [The Movie Database (TMDB)](https://www.themoviedb.org/) e gere uma API Key de desenvolvedor.
+2. Na raiz do projeto clonado, renomeie o arquivo `.env.exemplo` para `.env`.
+3. Adicione a sua chave dentro do arquivo: `REACT_APP_TMDB_API_KEY=sua_chave_aqui`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### ❗️ Instalando as Dependências:
 
-### Code Splitting
+Abra o seu terminal (como o WSL/Ubuntu ou CMD) e navegue até o diretório onde deseja armazenar o projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone git@github.com:Wanderson-A-Timoteo/movie-finder.git
+```
 
-### Analyzing the Bundle Size
+Depois, acesse a pasta clonada e digite a seguinte instrução para baixar todas as dependências (node_modules) necessárias:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+cd movie-finder
+npm install
+```
 
-### Making a Progressive Web App
+### 💨 Executando a Aplicação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Com as dependências instaladas e o .env configurado, inicie o servidor de desenvolvimento local digitando
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Pronto! Dessa forma o projeto estará rodando localmente em sua máquina. Acesse no navegador:
 
-### Deployment
+```
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br>
 
-### `npm run build` fails to minify
+### 🚩 Tenho Dúvidas... O que fazer?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Caso tenham dúvidas sobre o código do projeto, sintam-se a vontade em abrir uma **[ISSUE AQUI](https://github.com/Wanderson-A-Timoteo/movie-finder/issues)**. Assim que possível, estarei respondendo as todas as dúvidas que tiverem!
+
+<br>
+
+## Autor:
+
+Feito com ♥ by
+
+<div align="center">
+  <a href="https://github.com/Wanderson-A-Timoteo">
+    <img src="https://github.com/Wanderson-A-Timoteo.png" width="120px;" alt="Foto de Perfil do Wanderson Timóteo no GitHub" style="border-radius: 50%;"/>
+  </a>
+  <br />
+  <br />
+  <h4>Wanderson Timóteo</h4>
+    
+  <a href="https://www.wandersontimoteo.com.br/" target="_blank">
+    <b>🌐 Visite meu Portfólio</b>
+  </a>
+  &nbsp;|&nbsp;
+  <a href="https://wanderson-a-timoteo.github.io/perfil-de-contato/" target="_blank">
+    <b>🔗 Entre em Contato</b>
+  </a>
+</div>
