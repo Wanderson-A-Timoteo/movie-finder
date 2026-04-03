@@ -2,6 +2,7 @@ import { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { MovieContext } from "../context/MovieContext";
 import MovieCard from "./MovieCard";
+import { FaSpinner } from "react-icons/fa";
 
 function Search() {
   const { query } = useParams(); 
@@ -21,7 +22,10 @@ function Search() {
       </h2>
       
       {loading ? (
-        <p className="loading">Carregando filmes na base do TMDB...</p>
+        <div className="loading-container">
+          <FaSpinner className="spinner" />
+          <p>Buscando filmes na base do TMDB...</p>
+        </div>
       ) : (
         <ul className="movies-grid">
           {movies && movies.length > 0 ? (
